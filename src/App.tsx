@@ -1,7 +1,7 @@
-import "./App.css";
+import "./assets/scss/common.scss";
 
 function App() {
-  return <div>ㅎㅇ</div>;
+  return <div className="header">ㅎㅇ</div>;
 }
 
 export default App;
