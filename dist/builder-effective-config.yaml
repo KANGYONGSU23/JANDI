@@ -1,0 +1,9 @@
+directories:
+  output: dist
+  buildResources: assets
+files:
+  - build/**/*
+extraMetadata:
+  main: build/Main.js
+extends: react-cra
+electronVersion: 27.1.3
