@@ -20,6 +20,7 @@ export default function Login() {
           onChange={(e) => {
             setUsername(e.target.value);
           }}
+          style={true && { borderColor: "#CC2E2E", color: "#CC2E2E" }}
           placeholder="유저아이디 입력"
         />
         <Check isSuccess={!false} isFailed={false} />

@@ -16,7 +16,15 @@ export default function Check({ isSuccess, isFailed }: PropsType) {
           <Ouline />
         </div>
       )}
-      {isSuccess && <Done />}
+      {isSuccess && (
+        <>
+          <Done
+            onClick={() => {
+              console.log("gd");
+            }}
+          />
+        </>
+      )}
       {isFailed && <Failed />}
     </div>
   );
