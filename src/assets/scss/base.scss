@@ -1,9 +1,20 @@
 // base
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+#root {
   font-family: "NotoSansKR", "Roboto";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  -webkit-app-region: drag;
+}
+
+button {
+  -webkit-app-region: no-drag;
 }
 
 // layout
