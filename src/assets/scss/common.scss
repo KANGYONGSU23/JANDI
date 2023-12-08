@@ -1,0 +1,11 @@
+@mixin text-caption($color: white) {
+  font-size: 12px;
+  font-weight: 400;
+  color: $color;
+}
+
+@mixin text-body3($color: white, $weight: 400) {
+  font-size: 14px;
+  font-weight: $weight;
+  color: $color;
+}

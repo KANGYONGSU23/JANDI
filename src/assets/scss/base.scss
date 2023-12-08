@@ -1,8 +1,10 @@
+$brandcolor: #50cf4d;
 // base
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  color: white;
 }
 
 #root {
@@ -10,11 +12,9 @@
   width: 100vw;
   height: 100vh;
   color: white;
-  -webkit-app-region: drag;
-}
-
-button {
   -webkit-app-region: no-drag;
 }
 
-// layout
+button {
+  // -webkit-app-region: drag;
+}
