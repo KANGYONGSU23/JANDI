@@ -7,13 +7,14 @@ import useDebounce from "../hook/useDebounce";
 
 export default function Login() {
   const [username, setUsername] = useState<string>("");
-  const debouncceUsername = useDebounce(username, 200);
-  const { data, isSuccess, isError, isLoading } = API_login(debouncceUsername);
-  console.log(data);
+  const debouncceUsername = useDebounce(username, 500);
+  const { isSuccess, isError, isLoading, refetch } =
+    API_login(debouncceUsername);
 
   useEffect(() => {
-    console.log(debouncceUsername);
+    if (debouncceUsername) refetch();
   }, [debouncceUsername]);
+
   return (
     <div className="warrpper">
       <Logo />
@@ -24,10 +25,14 @@ export default function Login() {
           onChange={(e) => {
             setUsername(e.target.value);
           }}
-          style={isError ? { borderColor: "#CC2E2E", color: "#CC2E2E" } : {}}
+          style={
+            debouncceUsername && isError
+              ? { borderColor: "#CC2E2E", color: "#CC2E2E" }
+              : {}
+          }
           placeholder="유저아이디 입력"
         />
-        {(isLoading || isError || isSuccess) && (
+        {debouncceUsername && (isLoading || isError || isSuccess) && (
           <Check isSuccess={isSuccess} isFailed={isError} />
         )}
       </div>
