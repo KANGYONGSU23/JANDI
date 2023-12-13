@@ -8,9 +8,9 @@ function createWindow() {
    * */
   const win = new BrowserWindow({
     title: "잔디", // 제목
-    width: 320, // window 가로 사이즈
+    width: 500, // window 가로 사이즈
     height: 120, // window 세로 사이즈
-    x: 900, // window 실행 위치
+    x: 1000, // window 실행 위치
     y: 15, // window 실행 위치
     resizable: false, // 창 크기 조절 가능 여부
     alwaysOnTop: true, // 항상 다른 앱에 위에 존재한다
@@ -20,7 +20,7 @@ function createWindow() {
     skipTaskbar: true, // 작업표시줄에 안보일지 여부
     transparent: true,
     kiosk: true,
-    opacity: 0.8,
+    opacity: 0.95,
     frame: false,
     darkTheme: true,
     webPreferences: {

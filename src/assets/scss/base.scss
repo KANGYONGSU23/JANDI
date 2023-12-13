@@ -1,9 +1,20 @@
+$brandcolor: #50cf4d;
 // base
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: "NotoSansKR", "Roboto";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  color: white;
 }
 
-// layout
+#root {
+  font-family: "NotoSansKR", "Roboto";
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  -webkit-app-region: no-drag;
+}
+
+button {
+  // -webkit-app-region: drag;
+}
